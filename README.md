@@ -1,4 +1,4 @@
-# Vectornauts 🚀🪐🛰☄️
+# VectorVerse 🚀🪐🛰☄️
 A tool that helps you automatically explore and assign metadata to your data by comparing its geometric embeddings to a database of known metadata.
 
 Submission for the [2023 Pinecone Hackathon](https://pinecone-hackathon.devpost.com/).
