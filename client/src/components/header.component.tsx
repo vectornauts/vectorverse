@@ -51,6 +51,10 @@ const Header = () => {
                 </li>
               </>
             )}
+            {/*TODO: Wrap inside login*/}
+            <li>
+              <Link href="/vector" className="text-xl">Vector</Link>
+            </li>
           </ul>
         </div>
       </nav>
