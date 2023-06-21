@@ -1,4 +1,4 @@
-# VectorVerse
+# VectorVerse NextJS Development
 
 ## Getting Started
 First install NodeJS 18
@@ -18,7 +18,7 @@ To install the necessary packages and build the prisma db client, from the **cli
 ```shell
 npm install
 npx prisma generate
-prisma migrate dev --name init
+npx prisma migrate dev --name init
 npx prisma db push
 ```
 
