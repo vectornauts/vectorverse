@@ -15,7 +15,7 @@ export default async function Home() {
               network geometry, will streamline your process of categorization
               and metadata assignment.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <a href="/login"><button className="btn btn-primary">Get Started</button></a>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default async function Home() {
               Time to open the &quot;black box&quot; and start making sense of
               your LLMs.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <a href="/login"><button className="btn btn-primary">Get Started</button></a>
           </div>
         </div>
       </div>
