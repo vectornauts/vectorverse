@@ -77,13 +77,13 @@ export default async function Home() {
           <div className="mb-3">
             Powered By
             <div className="grid grid-flow-col gap-5 mt-2">
-              <a className="link" target="_blank" href="https://www.github.com/"><img className="w-10" src="/images/github.svg"></img></a>
-              <a className="link" target="_blank" href="https://www.vercel.com/"><img className="w-10" src="/images/logo-vercel-svgrepo-com.svg"></img></a>
-              <a className="link" target="_blank" href="https://www.pinecone.io/"><img className="w-10" src="/images/pinecone-icon-seeklogo.com.svg"></img></a>
-              <a className="link" target="_blank" href="https://tailwindcss.com/"><img className="w-10" src="/images/tailwind-css.svg"></img></a>
-              <a className="link" target="_blank" href="https://nextjs.org/"><img className="w-10" src="/images/nextjs-icon.svg"></img></a>
-              <a className="link" target="_blank" href="https://openai.com/"><img className="w-10" src="/images/openai.svg"></img></a>
-              <a className="link" target="_blank" href="https://huggingface.co/"><img className="w-10" src="/images/hf-logo.svg"></img></a>
+              <div className="tooltip" data-tip="GitHub"><a className="link" target="_blank" href="https://www.github.com/"><img className="w-10" src="/images/github.svg"></img></a></div>
+              <div className="tooltip" data-tip="Vercel"><a className="link" target="_blank" href="https://www.vercel.com/"><img className="w-10" src="/images/logo-vercel-svgrepo-com.svg"></img></a></div>
+              <div className="tooltip" data-tip="Pinecone"><a className="link" target="_blank" href="https://www.pinecone.io/"><img className="w-10" src="/images/pinecone-icon-seeklogo.com.svg"></img></a></div>
+              <div className="tooltip" data-tip="Tailwind CSS"><a className="link" target="_blank" href="https://tailwindcss.com/"><img className="w-10" src="/images/tailwind-css.svg"></img></a></div>
+              <div className="tooltip" data-tip="Next.js"><a className="link" target="_blank" href="https://nextjs.org/"><img className="w-10" src="/images/nextjs-icon.svg"></img></a></div>
+              <div className="tooltip" data-tip="OpenAI"><a className="link" target="_blank" href="https://openai.com/"><img className="w-10" src="/images/openai.svg"></img></a></div>
+              <div className="tooltip" data-tip="Hugging Face"><a className="link" target="_blank" href="https://huggingface.co/"><img className="w-10" src="/images/hf-logo.svg"></img></a></div>
             </div>
           </div>
           <p className="">
