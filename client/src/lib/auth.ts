@@ -12,6 +12,8 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
+  //@ts-ignore
+  site: process.env.NEXTAUTH_URL,
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
