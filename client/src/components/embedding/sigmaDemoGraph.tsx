@@ -46,14 +46,17 @@ const DemoGraph: React.FC<{}> = () => {
           zIndex: true,
         }}
       >
-        <ControlsContainer position={"bottom-right"}>
-          <ZoomControl />
-          <FullScreenControl />
-          <LayoutForceAtlas2Control />
+        <div className="divider"></div>
+        <ControlsContainer className="flex gap-2">
+          <ZoomControl className="mt-1" />
+          <FullScreenControl className="mt-1" />
+          <LayoutForceAtlas2Control className="mt-1"/>
+          <ControlsContainer >
+            <SearchControl className="border rounded border-2 px-2" />
+          </ControlsContainer>
         </ControlsContainer>
-        <ControlsContainer position={"top-right"}>
-          <SearchControl style={{ height: 1000, width: 1000 }} />
-        </ControlsContainer>
+        <div className="divider pb-8"></div>
+        
       </SigmaContainer>
     );
   } else {
