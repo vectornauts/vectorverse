@@ -11,7 +11,7 @@ export default async function Profile() {
       <Header />
       <section className="min-h-screen flex justify-center w-screen items-center">
         <div className="p-4 card h-fit flex justify-center items-center">
-          <div>
+          <div className="prose">
             <h1 className="mb-0">Profile</h1>
             {!user ? (
               <p>Loading...</p>
