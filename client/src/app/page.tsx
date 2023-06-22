@@ -65,10 +65,11 @@ export default async function Home() {
 
           <div className="p-7 rounded">
             <h1 className="text-5xl font-bold">
-              You haven't seen your vectors like this before
+              You haven&apos;t seen your vectors like this before
             </h1>
             <p className="py-6 prose">
-              Time to open the "black box" and start making sense of your LLMs.
+              Time to open the &quot;black box&quot; and start making sense of
+              your LLMs.
             </p>
             <button className="btn btn-primary">Get Started</button>
           </div>
