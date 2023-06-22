@@ -32,7 +32,7 @@ Vercel CLI 30.2.3
 To install the necessary packages and build the prisma db client, from the **client** directort run:
 ```shell
 cd client
-npm install
+npm install --legacy-peer-deps (or yarn install)
 npx prisma generate
 ```
 
