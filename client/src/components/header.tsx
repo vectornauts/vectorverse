@@ -8,7 +8,7 @@ const Header = () => {
   const user = session?.user;
 
   return (
-    <header className="h-20 w-screen">
+    <header className="h-30">
       <nav className="navbar bg-base-100 px-8">
         <div className="flex-1">
           <Link
@@ -18,22 +18,22 @@ const Header = () => {
             VectorVerse
           </Link>
         </div>
-        <div className="flex-none">
+        <div className="">
           <ul className="menu menu-horizontal px-2">
             <li>
-              <Link href="/" className="text-xl">
+              <Link href="/" className="py-0 text-small md:text-xl">
                 Home
               </Link>
             </li>
             {!user && (
               <>
                 <li>
-                  <Link href="/login" className="text-xl">
+                  <Link href="/login" className="py-0 text-small md:text-xl">
                     Login
                   </Link>
                 </li>
                 <li>
-                  <Link href="/register" className="text-xl">
+                  <Link href="/register" className="py-0 text-small md:text-xl">
                     Register
                   </Link>
                 </li>
@@ -42,22 +42,22 @@ const Header = () => {
             {user && (
               <>
                 <li>
-                  <Link href="/vector" className="text-xl">
+                  <Link href="/vector" className="py-0 text-small md:text-xl">
                     Vector
                   </Link>
                 </li>
                 <li>
-                  <Link href="/embedding" className="text-xl">
+                  <Link href="/embedding" className="py-0 text-small md:text-xl">
                     Embedding
                   </Link>
                 </li>
                 <li>
-                  <Link href="/profile" className="text-xl">
+                  <Link href="/profile" className="py-0 text-small md:text-xl">
                     Profile
                   </Link>
                 </li>
                 <li onClick={() => signOut()}>
-                  <a className="text-xl">Logout</a>
+                  <a className="py-0 text-small md:text-xl">Logout</a>
                 </li>
               </>
             )}

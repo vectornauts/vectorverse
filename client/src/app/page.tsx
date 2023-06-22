@@ -1,13 +1,13 @@
 export default async function Home() {
   return (
     <section>
-      <div className="hero bg-base-200 w-100">
+      <div className="hero bg-base-200 w-100 pb-6">
         <div className="hero-content flex-col lg:flex-row">
           <img
             src="/images/vectorverse.png"
-            className="max-w-sm rounded-lg shadow-2xl mx-3"
+            className="object-contain h-46 w-1/2 max-w-md rounded-lg shadow-2xl mx-3 mt-5"
           />
-          <div>
+          <div className="p-7">
             <h1 className="text-5xl font-bold">Welcome to VectorVerse</h1>
             <p className="py-6 prose">
               We are reimagining the way you explore, understand, and think
@@ -22,7 +22,7 @@ export default async function Home() {
 
       <div className="hero bg-base-300">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="h2 w-2/3 p-8">
+          <div className="h2 pt-8 m-4 md:w-2/3">
             <div className="carousel">
               <div id="item1" className="carousel-item w-full">
                 <div>
