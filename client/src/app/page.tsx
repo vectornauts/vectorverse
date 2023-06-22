@@ -1,11 +1,7 @@
-import Header from "@/components/header";
-
 export default async function Home() {
   return (
-    <>
-      <Header />
-
-      <div className="hero py-8 bg-base-200 w-100">
+    <section>
+      <div className="hero bg-base-200 w-100">
         <div className="hero-content flex-col lg:flex-row">
           <img
             src="/images/vectorverse.png"
@@ -95,6 +91,6 @@ export default async function Home() {
           </p>
         </div>
       </footer>
-    </>
+    </section>
   );
 }

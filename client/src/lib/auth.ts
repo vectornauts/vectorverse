@@ -57,6 +57,7 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
+    //@ts-ignore
     session: ({ session, token }) => {
       return {
         ...session,

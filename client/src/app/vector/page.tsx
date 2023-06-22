@@ -12,24 +12,21 @@ export default async function Index() {
   });
   const indexes = await pinecone.listIndexes();
   return (
-    <>
-      <Header />
-      <section className="min-h-screen pt-20 w-screen">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-4 md:grid-cols-4">
-            {indexes.map((vector, i) => (
-              <div className="card w-50 bg-base-100 shadow-xl" key={i}>
-                <div className="card-body">
-                  <h2 className="card-title">{vector}</h2>
-                  <div className="card-actions justify-end">
-                    <button className="btn btn-primary">View</button>
-                  </div>
+    <section className="pt-20">
+      <div className="container mx-auto px-4">
+        <div className="grid gap-4 md:grid-cols-4">
+          {indexes.map((vector, i) => (
+            <div className="card w-50 bg-base-100 shadow-xl" key={i}>
+              <div className="card-body">
+                <h2 className="card-title">{vector}</h2>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">View</button>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

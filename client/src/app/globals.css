@@ -3,11 +3,27 @@
 @tailwind utilities;
 
 @layer components {
+  section {
+    @apply min-h-screen w-screen;
+  }
+
   .prose a {
     @apply no-underline;
   }
 
   .card {
     @apply shadow-xl outline outline-gray-200 outline-1;
+  }
+
+  .js-plotly-plot .plotly .modebar {
+    @apply flex !important;
+  }
+
+  .js-plotly-plot .plotly .modebar-group {
+    @apply flex !important;
+  }
+
+  div .sigma-container {
+    @apply h-[1000px] w-full;
   }
 }

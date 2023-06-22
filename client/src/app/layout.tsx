@@ -1,6 +1,8 @@
 import "./globals.css";
 import { NextAuthProvider } from "./providers";
+import { Providers as ReduxProvider } from "@/redux/provider";
 import Head from "next/head";
+import Header from "@/components/header";
 
 export default function RootLayout({
   children,
@@ -19,7 +21,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className="">
-        <NextAuthProvider>{children}</NextAuthProvider>
+        <NextAuthProvider>
+          <ReduxProvider>
+            <Header />
+            {children}
+          </ReduxProvider>
+        </NextAuthProvider>
       </body>
     </html>
   );
