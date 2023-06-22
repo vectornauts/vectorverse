@@ -7,7 +7,7 @@ export default async function Profile() {
   const user = session?.user;
 
   return (
-    <section className="min-h-screen flex justify-center w-screen items-center">
+    <section className="pt-20 flex justify-center">
       <div className="p-4 card h-fit flex justify-center items-center">
         <div className="prose">
           <h1 className="mb-0">Profile</h1>

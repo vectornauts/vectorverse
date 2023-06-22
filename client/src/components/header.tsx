@@ -42,6 +42,16 @@ const Header = () => {
             {user && (
               <>
                 <li>
+                  <Link href="/vector" className="text-xl">
+                    Vector
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/embedding" className="text-xl">
+                    Embedding
+                  </Link>
+                </li>
+                <li>
                   <Link href="/profile" className="text-xl">
                     Profile
                   </Link>
@@ -52,11 +62,6 @@ const Header = () => {
               </>
             )}
             {/*TODO: Wrap inside login*/}
-            <li>
-              <Link href="/vector" className="text-xl">
-                Vector
-              </Link>
-            </li>
           </ul>
         </div>
       </nav>
