@@ -91,7 +91,7 @@ export const LoginForm = () => {
       </div>
 
       <button
-        className="btn btn-secondary w-full h-fit mb-2"
+        className="btn btn-default w-full h-fit mb-2"
         onClick={() => signIn("google", { callbackUrl })}
         role="button"
       >
@@ -104,7 +104,7 @@ export const LoginForm = () => {
         Continue with Google
       </button>
       <button
-        className="btn btn-secondary w-full h-fit mb-2"
+        className="btn btn-default w-full h-fit mb-2"
         onClick={() => signIn("github", { callbackUrl })}
         role="button"
       >
