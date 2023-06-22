@@ -15,7 +15,7 @@ const SigmaDemoGraph = dynamic(
 // Create a new Next.js page component
 export default function EmbeddingPage() {
   return (
-    <section className="flex flex-col items-center justify-center pt-20">
+    <section className="flex flex-col items-center justify-center">
       <PlotlyIndexEmbedding />
       <div className="divider"></div>
       <div>
