@@ -1,4 +1,4 @@
-import Header from "@/components/header.component";
+import Header from "@/components/header";
 
 export default async function Home() {
   return (

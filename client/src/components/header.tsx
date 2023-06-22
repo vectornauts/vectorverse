@@ -4,7 +4,7 @@ import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 
 const Header = () => {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const user = session?.user;
 
   return (
@@ -53,7 +53,9 @@ const Header = () => {
             )}
             {/*TODO: Wrap inside login*/}
             <li>
-              <Link href="/vector" className="text-xl">Vector</Link>
+              <Link href="/vector" className="text-xl">
+                Vector
+              </Link>
             </li>
           </ul>
         </div>
