@@ -78,7 +78,7 @@ export default async function Home() {
             Powered By
             <div className="grid grid-flow-col gap-5 mt-2">
               <a className="link" target="_blank" href="https://www.github.com/"><img className="w-10" src="/images/github.svg"></img></a>
-              <a className="link" target="_blank" href="https://wwww.vercel.com/"><img className="w-10" src="/images/logo-vercel-svgrepo-com.svg"></img></a>
+              <a className="link" target="_blank" href="https://www.vercel.com/"><img className="w-10" src="/images/logo-vercel-svgrepo-com.svg"></img></a>
               <a className="link" target="_blank" href="https://www.pinecone.io/"><img className="w-10" src="/images/pinecone-icon-seeklogo.com.svg"></img></a>
               <a className="link" target="_blank" href="https://tailwindcss.com/"><img className="w-10" src="/images/tailwind-css.svg"></img></a>
               <a className="link" target="_blank" href="https://nextjs.org/"><img className="w-10" src="/images/nextjs-icon.svg"></img></a>
