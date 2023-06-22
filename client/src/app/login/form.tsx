@@ -14,7 +14,9 @@ export const LoginForm = () => {
   const [error, setError] = useState("");
 
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/profile";
+  const callbackUrl = searchParams
+    ? searchParams.get("callbackUrl") || "/profile"
+    : `${process.env.NEXTAUTH_URL}/profile`;
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
