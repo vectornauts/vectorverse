@@ -14,6 +14,7 @@
   "dependencies": {
     "@pinecone-database/pinecone": "^0.1.6",
     "@prisma/client": "^4.13.0",
+    "@reduxjs/toolkit": "^1.9.3",
     "@types/node": "^18.16.0",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
@@ -23,14 +24,18 @@
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
     "next-auth": "0.0.0-pr.6777.c5550344",
+    "plotly.js": "^2.24.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-plotly.js": "^2.6.0",
+    "react-redux": "^8.0.5",
     "tailwind-merge": "^1.12.0",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "@types/bcryptjs": "^2.4.2",
+    "@types/react-plotly.js": "^2.6.0",
     "autoprefixer": "^10.4.14",
     "daisyui": "^3.1.1",
     "postcss": "^8.4.24",
