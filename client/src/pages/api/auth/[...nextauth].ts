@@ -1,3 +1,4 @@
+import NextAuth from "next-auth";
 import { prisma } from "@/lib/prisma";
 import { compare } from "bcryptjs";
 import type { NextAuthOptions } from "next-auth";
@@ -81,3 +82,5 @@ export const authOptions: NextAuthOptions = {
     },
   },
 };
+
+export default NextAuth(authOptions);
