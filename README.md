@@ -1,3 +1,5 @@
+[![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=vectorverse&style=flat)](https:/vectorverse.vercel.app)
+
 # VectorVerse 🚀🪐🛰☄️
 A tool that helps you automatically explore and assign metadata to your data by comparing its geometric embeddings to a database of known metadata.
 
