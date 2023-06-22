@@ -72,12 +72,24 @@ export default async function Home() {
         </div>
       </div>
 
-      <footer className="footer footer-center p-4 text-base-content">
+      <footer className="footer footer-center p-4 text-base-content text-small">
         <div>
+          <div className="mb-3">
+            Powered By
+            <div className="grid grid-flow-col gap-5 mt-2">
+              <a className="link" target="_blank" href="https://www.github.com/"><img className="w-10" src="/images/github.svg"></img></a>
+              <a className="link" target="_blank" href="https://wwww.vercel.com/"><img className="w-10" src="/images/logo-vercel-svgrepo-com.svg"></img></a>
+              <a className="link" target="_blank" href="https://www.pinecone.io/"><img className="w-10" src="/images/pinecone-icon-seeklogo.com.svg"></img></a>
+              <a className="link" target="_blank" href="https://tailwindcss.com/"><img className="w-10" src="/images/tailwind-css.svg"></img></a>
+              <a className="link" target="_blank" href="https://nextjs.org/"><img className="w-10" src="/images/nextjs-icon.svg"></img></a>
+              <a className="link" target="_blank" href="https://openai.com/"><img className="w-10" src="/images/openai.svg"></img></a>
+              <a className="link" target="_blank" href="https://huggingface.co/"><img className="w-10" src="/images/hf-logo.svg"></img></a>
+            </div>
+          </div>
           <p className="">
             Copyright © 2023
             <a
-              className="text-blue-500 hover:text-red-500"
+              className="link hover:text-blue-500"
               href="https://github.com/vectornauts"
               target="_blank"
               rel="noopener noreferrer"
