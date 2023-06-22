@@ -1,2 +1,5 @@
 *.pt
 data/db
+.idea
+.vercel
+.env*.local

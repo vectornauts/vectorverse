@@ -1,5 +1,5 @@
 import { getServerSession } from "next-auth";
-import Header from "@/components/header.component";
+import Header from "@/components/header";
 import { authOptions } from "@/lib/auth";
 
 export default async function Profile() {
