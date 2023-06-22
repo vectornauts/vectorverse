@@ -13,7 +13,7 @@ Submission for the [2023 Pinecone Hackathon](https://pinecone-hackathon.devpost.
 Built on top of the [New York Times Annotated Corpus](https://paperswithcode.com/dataset/new-york-times-annotated-corpus). 
 
 # VectorVerse
-The client app code is available at [/client](/client/). For details, see the [readme](/client/README.md).
+The client app code is available at [client/](/client/). For details, see the [readme](/client/README.md).
 
 # Technologies and Partner Tools
 A non-exhaustive list of some partner tools and technolgoies that made this project possible:
