@@ -45,7 +45,7 @@ export const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form className="prose" onSubmit={onSubmit}>
       {error && (
         <p className="text-center bg-red-300 py-4 mb-6 rounded">{error}</p>
       )}

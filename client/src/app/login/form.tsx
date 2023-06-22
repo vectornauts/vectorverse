@@ -51,7 +51,7 @@ export const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form className="prose" onSubmit={onSubmit}>
       {error && (
         <p className="text-center bg-red-300 py-4 mb-6 rounded">{error}</p>
       )}
@@ -91,7 +91,7 @@ export const LoginForm = () => {
       </div>
 
       <button
-        className="btn btn-default w-full h-fit mb-2"
+        className="btn btn-default w-full h-fit mb-2 prose-sm"
         onClick={() => signIn("google", { callbackUrl })}
         role="button"
       >
@@ -104,7 +104,7 @@ export const LoginForm = () => {
         Continue with Google
       </button>
       <button
-        className="btn btn-default w-full h-fit mb-2"
+        className="btn btn-default w-full h-fit mb-2 prose-sm"
         onClick={() => signIn("github", { callbackUrl })}
         role="button"
       >
