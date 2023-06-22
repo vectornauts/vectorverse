@@ -17,6 +17,7 @@ export default function EmbeddingPage() {
   return (
     <section className="flex flex-col items-center justify-center pt-20">
       <PlotlyIndexEmbedding />
+      <div className="divider"></div>
       <div>
         <SigmaDemoGraph />
       </div>

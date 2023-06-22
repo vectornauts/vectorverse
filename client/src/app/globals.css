@@ -24,6 +24,6 @@
   }
 
   div .sigma-container {
-    @apply h-[1000px] w-full;
+    @apply h-full w-full;
   }
 }
