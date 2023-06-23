@@ -33,6 +33,7 @@ const DemoGraph: React.FC<{}> = () => {
   if (graph) {
     return (
       <SigmaContainer
+        className="border-2 rounded"
         graph={graph}
         style={{ height: "50rem", width: "50rem" }}
         settings={{
