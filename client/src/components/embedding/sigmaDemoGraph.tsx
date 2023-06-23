@@ -35,7 +35,7 @@ const DemoGraph: React.FC<{}> = () => {
       <SigmaContainer
         className="border-2 rounded"
         graph={graph}
-        style={{ height: "50rem", width: "50rem" }}
+        style={{ height: "40rem", width: "100%" }}
         settings={{
           nodeProgramClasses: { image: getNodeProgramImage() },
           defaultNodeType: "image",

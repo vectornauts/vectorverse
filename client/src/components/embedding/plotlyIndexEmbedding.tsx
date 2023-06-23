@@ -57,9 +57,10 @@ const PlotlyScatterEmbedding: React.FC = () => {
 
   const layout: Partial<Layout> = {
     title: "Index Embedding",
+    autosize: true,
     titlefont: { size: 20 },
-    width: 1000,
-    height: 800,
+    // width: 1000,
+    // height: 800,
     legend: {
       x: 1.01,
       y: 0.5,
@@ -80,16 +81,16 @@ const PlotlyScatterEmbedding: React.FC = () => {
       ticks: "",
       tickfont: { color: "rgba(0,0,0,0)" },
     },
-    margin: {
-      l: 50,
-      r: 50,
-      b: 50,
-      t: 150,
-      pad: 4,
-    },
+    // margin: {
+    //   l: 50,
+    //   r: 50,
+    //   b: 50,
+    //   t: 75,
+    //   pad: 4,
+    // },
   };
 
-  return <Plot data={traces} layout={layout} />;
+  return <Plot data={traces} layout={layout} useResizeHandler={true} style={{width: "100%", height: "40rem"}} />;
 };
 
 export default PlotlyScatterEmbedding;
