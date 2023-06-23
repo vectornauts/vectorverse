@@ -16,10 +16,12 @@ const SigmaDemoGraph = dynamic(
 export default function EmbeddingPage() {
   return (
     <section className="flex flex-col items-center justify-center">
-      <PlotlyIndexEmbedding />
+      <div className="border-2 rounded">
+        <PlotlyIndexEmbedding />
+      </div>
       <div className="divider"></div>
       <div>
-        <SigmaDemoGraph />
+        <SigmaDemoGraph/>
       </div>
     </section>
   );
