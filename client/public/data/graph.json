@@ -6,15 +6,15 @@
       "attributes": {
         "key": "cytoscape",
         "label": "Cytoscape",
-        "tag": "Tool",
-        "URL": "https://en.wikipedia.org/wiki/Cytoscape",
+        // "tag": "Tool",
+        // "URL": "https://en.wikipedia.org/wiki/Cytoscape",
         "cluster": "0",
         "x": 643.82275390625,
         "y": -770.3126220703125,
-        "score": 0.00006909602204225056,
+        // "score": 0.00006909602204225056,
         "color": "#6c3e81",
         "clusterLabel": "Graph theory",
-        "image": "/react-sigma/demo/images/tool.svg",
+        // "image": "/react-sigma/demo/images/tool.svg",
         "size": 3.0445366404919616
       }
     },
@@ -82,7 +82,7 @@
         "score": 0,
         "color": "#666666",
         "clusterLabel": "Spreadsheets",
-        "image": "/react-sigma/demo/images/tool.svg",
+        // "image": "/react-sigma/demo/images/tool.svg",
         "size": 3
       }
     },
@@ -99,7 +99,7 @@
         "score": 0.007071322614031072,
         "color": "#57a835",
         "clusterLabel": "Logic of information",
-        "image": "/react-sigma/demo/images/charttype.svg",
+        // "image": "/react-sigma/demo/images/charttyp  e.svg",
         "size": 7.557902810543951
       }
     },
