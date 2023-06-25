@@ -71,8 +71,8 @@ const DemoGraph: React.FC<{}> = () => {
           zIndex: true,
         }}
       >
-        <div className="divider"></div>
-        <ControlsContainer className="flex gap-2">
+        {/* <div className="divider"></div> */}
+        <ControlsContainer className="flex gap-2 pt-5">
           <ZoomControl className="mt-1" />
           <FullScreenControl className="mt-1" />
           <LayoutForceAtlas2Control className="mt-1"/>
@@ -80,7 +80,7 @@ const DemoGraph: React.FC<{}> = () => {
             <SearchControl className="border rounded border-2 px-2" />
           </ControlsContainer>
         </ControlsContainer>
-        <div className="divider pb-8"></div>
+        {/* <div className="divider pb-8"></div> */}
         
       </SigmaContainer>
       </div>

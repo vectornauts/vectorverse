@@ -22,11 +22,11 @@ export default function EmbeddingPage() {
   return (
     <section className="">
       <div class="grid grid-flow-row justify-items-center">
-        <div className="border-2 rounded m-5 w-3/4"><PlotlyIndexEmbedding /></div>
+        <div className="border-2 rounded w-3/4 grid grid-flow-row justify-items-center"><PlotlyIndexEmbedding className='bg-blue-500' /></div>
         <div className="divider w-3/4"></div>
         <div className="m-5 w-3/4"><SigmaDemoGraph/></div>
-        <div className="divider w-3/4"></div>
-        <div className="border-2 rounded m-5 w-3/4"><TableEmbedding /></div>
+        <div className="divider w-3/4 pt-5"></div>
+        <div className="border-2 rounded w-3/4"><TableEmbedding /></div>
       </div>
     </section>
   );
