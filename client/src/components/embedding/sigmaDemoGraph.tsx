@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-
 import Graph from "graphology";
+
 import getNodeProgramImage from "sigma/rendering/webgl/programs/node.image";
 import {
   SigmaContainer,
@@ -13,25 +13,49 @@ import {
 //@ts-ignore
 import { LayoutForceAtlas2Control } from "@react-sigma/layout-forceatlas2";
 
+
+// interface NodeData {
+//   label: string;
+//   x: number;
+//   y: number;
+//   id: string;
+//   attributes: {
+//     community: string;
+//   };
+//   color: string;
+//   size: number;
+// }
+
+// interface GraphData {
+//   nodes: NodeData[];
+// }
+
 const DemoGraph: React.FC<{}> = () => {
+  // const [graphData, setGraphData] = useState<GraphData | null>(null);
   const [graphData, setGraphData] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("/data/graph.json");
+      const response = await fetch("/data/sentbert50_converted_wo_missing.json");
+      // const response = await fetch("/data/graph.json");
+
       const jsonData = await response.json();
       console.log(jsonData);
       setGraphData(jsonData);
     };
 
+
     fetchData();
   }, []);
+
 
   //@ts-ignore
   const graph = graphData ? Graph.from(graphData) : undefined;
 
   if (graph) {
     return (
+      <div>
+        <h1>GRAPH</h1>
       <SigmaContainer
         className="border-2 rounded"
         graph={graph}
@@ -59,6 +83,7 @@ const DemoGraph: React.FC<{}> = () => {
         <div className="divider pb-8"></div>
         
       </SigmaContainer>
+      </div>
     );
   } else {
     return <></>;

@@ -30,6 +30,7 @@ if __name__ == "__main__":
     md_path = '../../data/nytfb/nytfb_metadata.json' 
 
     graph = load_graph(f"../../data/nytfb/graphs/{sent_mod_name}_{nn}_fa.json")
+    # graph_df = pd.json_normalize(graph["nodes"]).astype(str)
 
     meta = load_metadata(md_path)
     meta_df = pd.DataFrame.from_dict(meta,orient = 'index').astype(str).reset_index().rename(columns={"index": "vector_index"})

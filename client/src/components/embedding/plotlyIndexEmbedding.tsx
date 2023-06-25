@@ -3,60 +3,71 @@ import React from "react";
 import Plot from "react-plotly.js";
 import { boxMullerRandom } from "@/lib/math";
 import { Layout } from "plotly.js";
+// import fs from 'fs';
+import data from "./dataframe.json";
 
-const generateData = (): { x: number[]; y: number[] }[] => {
-  const classes = 5;
-  const pointsPerClass = 20000;
-  const jitter = 1; // adjust this to change the spread of each blob
+// const generateData = (): { x: number[]; y: number[]; color: string[]; relations: string[] }[] => {
+//   const grouped: { [key: string]: { x: number[]; y: number[]; color: string[]; relations: string[]} } = {};
 
-  return Array.from({ length: classes }, () => {
-    const centerX = Math.random() * 10; // Random center for x values
-    const centerY = Math.random() * 10; // Random center for y values
+//   data.forEach((row: { x: string, y: string, community: string, color: string, relations: string }) => {
+//     if (!grouped[row.community]) {
+//       grouped[row.community] = { x: [], y: [], color: [], relations: []};
+//     }
 
-    return {
-      x: Array.from(
-        { length: pointsPerClass },
-        () => centerX + boxMullerRandom() * jitter
-      ),
-      y: Array.from(
-        { length: pointsPerClass },
-        () => centerY + boxMullerRandom() * jitter
-      ),
-    };
+//     grouped[row.community].x.push(Number(row.x));
+//     grouped[row.community].y.push(Number(row.y));
+//     grouped[row.community].color.push(row.color);
+//     grouped[row.community].relations.push(row.relations); 
+//     // grouped[row.community].Summary.push(row.Summary); 
+//   });
+
+//   return Object.values(grouped);
+// };
+
+
+const generateData = (): { x: number[]; y: number[]; color: string[]; relations: string[]; Summary: string[] }[] => {
+  const grouped: { [key: string]: { x: number[]; y: number[]; color: string[]; relations: string[]; Summary: string[] } } = {};
+
+  data.forEach((row: { x: string, y: string, community: string, color: string, relations: string, Summary: string }) => {
+    if (!grouped[row.community]) {
+      grouped[row.community] = { x: [], y: [], color: [], relations: [], Summary: [] };
+    }
+
+    grouped[row.community].x.push(Number(row.x));
+    grouped[row.community].y.push(Number(row.y));
+    grouped[row.community].color.push(row.color);
+    grouped[row.community].relations.push(row.relations); 
+    grouped[row.community].Summary.push(row.Summary); 
   });
+
+  return Object.values(grouped);
 };
+
 
 const PlotlyScatterEmbedding: React.FC = () => {
   const classData = generateData();
 
-  const plotlyColorPalette = [
-    "#1f77b4", // muted blue
-    "#ff7f0e", // safety orange
-    "#2ca02c", // cooked asparagus green
-    "#d62728", // brick red
-    "#9467bd", // muted purple
-    "#8c564b", // chestnut brown
-    "#e377c2", // raspberry yogurt pink
-    "#7f7f7f", // middle gray
-    "#bcbd22", // curry yellow-green
-    "#17becf", // blue-teal
-  ];
-
   const traces = classData.map((data, i) => ({
     x: data.x,
     y: data.y,
+
+    // relations: data.relations,
     type: "scattergl" as const, // Specify type as a constant
     mode: "markers" as const,
     marker: {
-      color: plotlyColorPalette[i % plotlyColorPalette.length],
+      // color: plotlyColorPalette[i % plotlyColorPalette.length],
+      color : data.color,
       size: 1,
       opacity: 0.75,
-    }, // cycle through colors
-    name: `Cluster ${i + 1}`,
+    }, 
+    name: `Cluster ${i + 1} `,
+
+    hovertemplate: `x: %{x}<br>y: %{y}<br>Cluster: ${i+1}<br>Relations: ${data.relations[0]} <br> `,
+    // text: data.relations.map(rel => rel.toString()).join(', '),
   }));
 
   const layout: Partial<Layout> = {
-    title: "Index Embedding",
+    title: "Pinecone Index Embedding",
     autosize: true,
     titlefont: { size: 20 },
     // width: 1000,
@@ -67,7 +78,7 @@ const PlotlyScatterEmbedding: React.FC = () => {
       title: { text: "Clusters", font: { size: 16 } },
       itemsizing: "constant",
       traceorder: "normal",
-      font: { size: 16 },
+      font: { size: 10 },
     },
     xaxis: {
       showgrid: false,
@@ -81,16 +92,21 @@ const PlotlyScatterEmbedding: React.FC = () => {
       ticks: "",
       tickfont: { color: "rgba(0,0,0,0)" },
     },
-    // margin: {
-    //   l: 50,
-    //   r: 50,
-    //   b: 50,
-    //   t: 75,
-    //   pad: 4,
-    // },
+    margin: {
+      l: 50,
+      r: 50,
+      b: 50,
+      t: 75,
+      pad: 4,
+    },
   };
 
-  return <Plot data={traces} layout={layout} useResizeHandler={true} style={{width: "100%", height: "40rem"}} />;
+
+  return <Plot data={traces} layout={layout} useResizeHandler={true} style={{width: "80%", height: "40rem"}} />;
+  
 };
 
+
 export default PlotlyScatterEmbedding;
+
+
